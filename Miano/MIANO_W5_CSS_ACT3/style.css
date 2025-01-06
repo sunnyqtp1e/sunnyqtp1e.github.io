@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.box {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: purple;
+}
+.inner {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: flex-start; /* Align horizontally to the start */
+    align-items: flex-start;    /* Align vertically to the start */
+    font-size: 22px;
+    font-weight: bold;
+    color: black;
+    padding: 5px; /* Add some padding for spacing from the edges */
+}
+.red {
+    background-color: red;
+}
+.blue {
+    background-color: blue;
+}

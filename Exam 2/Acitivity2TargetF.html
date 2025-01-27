@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Courses</title>
+    <style>
+        body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    background-color: #f8f9fa;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background-color: #2e2e2e;
+    color: white;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.sidebar a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.sidebar a:hover {
+    background-color: #444;
+}
+.sidebar .logo {
+    text-align: center;
+    margin: 20px 0;
+}
+.sidebar .logo img {
+    width: 80px;
+}
+.sidebar .footer {
+    margin-top: auto;
+    padding: 20px;
+    font-size: 12px;
+}
+
+/* Main Content */
+.main {
+    flex-grow: 1;
+    padding: 20px;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.header h1 {
+    margin: 0;
+}
+.header .filters {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.header input, .header select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Courses */
+.course-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.course-item {
+    background-color: white;
+    padding: 15px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.course-item .details {
+    display: flex;
+    flex-direction: column;
+}
+.course-item .details .title {
+    font-weight: bold;
+}
+.course-item .details .info {
+    font-size: 14px;
+    color: gray;
+}
+
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <img src="https://via.placeholder.com/80" alt="Logo">
+        </div>
+        <a href="#"><span>🏛</span>Institution Page</a>
+        <a href="#"><span>📚</span>Courses</a>
+        <a href="#"><span>📅</span>Calendar</a>
+        <a href="#"><span>✉️</span>Messages</a>
+        <a href="#"><span>📊</span>Grades</a>
+        <a href="#"><span>🛠</span>Tools</a>
+        <a href="#"><span>🚪</span>Sign Out</a>
+        <div class="footer">
+            Privacy | Terms | Accessibility
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="header">
+            <h1>Courses</h1>
+            <div class="filters">
+                <input type="text" placeholder="Search your courses">
+                <select>
+                    <option>All Terms</option>
+                </select>
+                <select>
+                    <option>All Courses</option>
+                </select>
+                <select>
+                    <option>25</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="course-list">
+            <div class="course-item">
+                <div class="details">
+                    <span class="title">ENG024.A123.2T.24.25</span>
+                    <span class="info">A123 Writing for Academic Studies | Open | Jerahmee De Leon | More info</span>
+                </div>
+                <span>⭐</span>
+            </div>
+            <div class="course-item">
+                <div class="details">
+                    <span class="title">CS122.A221.2T.24.25</span>
+                    <span class="info">Automata and Language Theory | Open | Patrick Cerna | More info</span>
+                </div>
+                <span>⭐</span>
+            </div>
+            <div class="course-item">
+                <div class="details">
+                    <span class="title">CS110-1.A123.2T.24.25</span>
+                    <span class="info">Discrete Structures 1 | Open | Genevieve Pilongo | More info</span>
+                </div>
+                <span>⭐</span>
+            </div>
+            <div class="course-item">
+                <div class="details">
+                    <span class="title">HUM039.A222.2T.24.25</span>
+                    <span class="info">Ethics | Open | Heidegger Jake Diacono | More info</span>
+                </div>
+                <span>⭐</span>
+            </div>
+            <div class="course-item">
+                <div class="details">
+                    <span class="title">VE022.A123.2T.24.25</span>
+                    <span class="info">Life Coaching Series 2 | Open | Jayson Paul Trinidad | More info</span>
+                </div>
+                <span>⭐</span>
+            </div>
+            <div class="course-item">
+                <div class="details">
+                    <span class="title">MATH022.A122.2T.24.25</span>
+                    <span class="info">Linear Algebra | Open | Pamela Archimedes | More info</span>
+                </div>
+                <span>⭐</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

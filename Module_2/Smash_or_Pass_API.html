@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smash or Pass</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            background: url('your-background-image.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+        }
+        #game-container {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 15px;
+            display: inline-block;
+            margin-top: 50px;
+        }
+        #image-container {
+            margin: 20px auto;
+            width: 300px;
+            height: 300px;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+        img:hover {
+            transform: scale(1.05);
+        }
+        button {
+            margin: 10px;
+            padding: 12px 25px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            border-radius: 10px;
+            transition: background 0.3s, transform 0.2s;
+        }
+        .smash-btn {
+            background-color: green;
+            color: white;
+        }
+        .pass-btn {
+            background-color: red;
+            color: white;
+        }
+        button:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div id="game-container">
+        <h1>Smash or Pass</h1>
+        <div id="image-container">
+            <img id="random-image" src="" alt="Random Image">
+        </div>
+        <div>
+            <button class="smash-btn" onclick="smash()">Smash</button>
+            <button class="pass-btn" onclick="pass()">Pass</button>
+        </div>
+        <p>Smashes: <span id="smash-count">0</span></p>
+        <p>Passes: <span id="pass-count">0</span></p>
+    </div>
+    
+    <script>
+        let smashCount = 0;
+        let passCount = 0;
+
+        function getRandomImage() {
+            document.getElementById("random-image").src = "https://pic.re/image?" + new Date().getTime();
+        }
+
+        function smash() {
+            smashCount++;
+            document.getElementById("smash-count").textContent = smashCount;
+            getRandomImage();
+        }
+
+        function pass() {
+            passCount++;
+            document.getElementById("pass-count").textContent = passCount;
+            getRandomImage();
+        }
+
+        // Load first image
+        getRandomImage();
+    </script>
+</body>
+</html>
